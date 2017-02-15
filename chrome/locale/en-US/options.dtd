@@ -1,0 +1,25 @@
+<!ENTITY prefwindow.title "Calomel SSL Validation preferences">
+<!ENTITY pane1.title "Calomel SSL Validation preferences">
+<!ENTITY options.description_top "">
+<!ENTITY ciphers_256pfs_pref.label "256 bit Perfect Forward Secrecy only">
+<!ENTITY ciphers_128pfs_pref.label "128 bit Perfect Forward Secrecy and stronger">
+<!ENTITY ciphers_128_pref.label "128 bit and stronger">
+<!ENTITY ciphers_all_pref.label "all ciphers allowed">
+<!ENTITY ocsp_pref.label  "disable Online Certificate Status Protocol (OCSP) checks">
+<!ENTITY tls_pref.label "enable TLSv1.2 only (SSLv3, TLSv1.0 and TLSv1.1 denied)">
+<!ENTITY anim_mode_pref.label "disable animated GIFs">
+<!ENTITY proxy_dns_pref.label "enable dns lookups over SOCKS5 when using a proxy">
+<!ENTITY tool_tips_pref.label "disable pop-up tool tips under the mouse cursor">
+<!ENTITY paint_delay_pref.label "wait up to 2000ms before page rendering">
+<!ENTITY safe_browsing_pref.label "disable safe browsing for privacy and speed">
+<!ENTITY home_on_update_pref.label "show help page after update">
+<!ENTITY prefetch_pref.label "disable prefetch of unvisited links">
+<!ENTITY dns_prefetch_pref.label "disable dns prefetch of unvisited sites">
+<!ENTITY tab_title_pref.label "do not show tab titles or icons">
+<!ENTITY geo_locate_pref.label "disable geo location reporting to webpages">
+<!ENTITY spelling_pref.label "enable spell check on all text boxes">
+<!ENTITY mem_cache_pref.label "enable caching only to ram (128meg); not to the hard drive">
+<!ENTITY url_guess_pref.label "disable short URL keyword guessing">
+<!ENTITY dns_cache_pref.label "disable internal DNS cache">
+<!ENTITY send_referer_pref.label "do not send any referer information to remote servers">
+<!ENTITY user_agent_pref.label "anonymize the user agent, 'Mozilla/5.0 (compatible)'">

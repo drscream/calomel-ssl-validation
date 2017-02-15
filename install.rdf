@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:em="http://www.mozilla.org/2004/em-rdf#">
+  <Description about="urn:mozilla:install-manifest">
+    <em:id>calomelsslvalidation@calomel.org</em:id>
+    <em:type>2</em:type>
+    <em:name>Calomel SSL Validation</em:name>
+    <em:version>0.82</em:version>
+    <em:creator>Calomel.org</em:creator>
+    <em:homepageURL>https://calomel.org</em:homepageURL>
+    <em:contributor></em:contributor>
+    <em:description>Validate the grade of security of the SSL connection.</em:description>
+    <em:optionsURL>chrome://calomelsslvalidation/content/options.xul</em:optionsURL>
+    <em:targetApplication>
+      <Description>
+        <em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id> <!-- Firefox -->
+        <em:minVersion>47.0</em:minVersion>
+        <em:maxVersion>47.0</em:maxVersion>
+      </Description>
+    </em:targetApplication>
+  </Description>
+</RDF>

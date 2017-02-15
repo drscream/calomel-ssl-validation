@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<!DOCTYPE prefwindow SYSTEM "chrome://calomelsslvalidation/locale/options.dtd">
+<prefwindow id="calomelsslvalidation-preferences" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul" buttons="accept,cancel" title="&prefwindow.title;">
+<script src="chrome://calomelsslvalidation/content/calomelsslvalidation.js"/>
+  <prefpane id="pane1" label="&pane1.title;">
+    <preferences>
+      <preference id="ciphers_256pfs_pref" name="extensions.calomelsslvalidation.ciphers_256pfs" type="bool"/>
+      <preference id="ciphers_128pfs_pref" name="extensions.calomelsslvalidation.ciphers_128pfs" type="bool"/>
+      <preference id="ciphers_128_pref" name="extensions.calomelsslvalidation.ciphers_128" type="bool"/>
+      <preference id="ciphers_all_pref" name="extensions.calomelsslvalidation.ciphers_all" type="bool"/>
+      <preference id="ocsp_pref" name="extensions.calomelsslvalidation.ocsp" type="bool"/>
+      <preference id="tls_pref" name="extensions.calomelsslvalidation.tls" type="bool"/>
+      <preference id="anim_mode_pref" name="extensions.calomelsslvalidation.animations" type="bool"/>
+      <preference id="tool_tips_pref" name="extensions.calomelsslvalidation.tool_tips" type="bool"/>
+      <preference id="proxy_dns_pref" name="extensions.calomelsslvalidation.proxy_dns" type="bool"/>
+      <preference id="paint_delay_pref" name="extensions.calomelsslvalidation.paint_delay" type="bool"/>
+      <preference id="safe_browsing_pref" name="extensions.calomelsslvalidation.safe_browsing" type="bool"/>
+      <preference id="home_on_update_pref" name="extensions.calomelsslvalidation.home_on_update" type="bool"/>
+      <preference id="prefetch_pref" name="extensions.calomelsslvalidation.prefetch" type="bool"/>
+      <preference id="dns_prefetch_pref" name="extensions.calomelsslvalidation.dns_prefetch" type="bool"/>
+      <preference id="tab_title_pref" name="extensions.calomelsslvalidation.tab_title" type="bool"/>
+      <preference id="geo_locate_pref" name="extensions.calomelsslvalidation.geo_locate" type="bool"/>
+      <preference id="spelling_pref" name="extensions.calomelsslvalidation.spelling" type="bool"/>
+      <preference id="mem_cache_pref" name="extensions.calomelsslvalidation.mem_cache" type="bool"/>
+      <preference id="url_guess_pref" name="extensions.calomelsslvalidation.url_guess" type="bool"/>
+      <preference id="dns_cache_pref" name="extensions.calomelsslvalidation.dns_cache" type="bool"/>
+      <preference id="send_referer_pref" name="extensions.calomelsslvalidation.send_referer" type="bool"/>
+      <preference id="user_agent_pref" name="extensions.calomelsslvalidation.user_agent" type="bool"/>
+    </preferences>
+    <image src="chrome://calomelsslvalidation/skin/calomelsslvalidation_menu_top.png" validate="never" />
+    <description flex="1" style="min-height: 2em"> &options.description_top; </description>
+    <tabbox>
+     <tabs>
+       <tab label="Security"/>
+       <tab label="Optimization"/>
+       <tab label="Privacy"/>
+       <tab label="Annoyances"/>
+       <tab label="About"/>
+     </tabs>
+     <tabpanels>
+       <tabpanel id="securitytab" orient="vertical">
+         <description>Cipher Restrictions:</description>
+         <checkbox id="ciphers_256pfs_check" preference="ciphers_256pfs_pref" label="&ciphers_256pfs_pref.label;"/>
+         <checkbox id="ciphers_128pfs_check" preference="ciphers_128pfs_pref" label="&ciphers_128pfs_pref.label;"/>
+         <checkbox id="ciphers_128_check" preference="ciphers_128_pref" label="&ciphers_128_pref.label;"/>
+         <checkbox id="ciphers_all_check" preference="ciphers_all_pref" label="&ciphers_all_pref.label;"/>
+         <spacer height="16px" />
+         <checkbox id="ocsp_check" preference="ocsp_pref" label="&ocsp_pref.label;"/>
+         <checkbox id="tls_check" preference="tls_pref" label="&tls_pref.label;"/>
+         <checkbox id="url_guess_check" preference="url_guess_pref" label="&url_guess_pref.label;"/>
+       </tabpanel>
+       <tabpanel id="optimizationtab" orient="vertical">
+         <checkbox id="proxy_dns_check" preference="proxy_dns_pref" label="&proxy_dns_pref.label;"/>
+         <checkbox id="paint_delay_check" preference="paint_delay_pref" label="&paint_delay_pref.label;"/>
+         <checkbox id="prefetch_check" preference="prefetch_pref" label="&prefetch_pref.label;"/>
+         <checkbox id="mem_cache_check" preference="mem_cache_pref" label="&mem_cache_pref.label;"/>
+       </tabpanel>
+       <tabpanel id="privacytab" orient="vertical">
+         <checkbox id="tab_title_check" preference="tab_title_pref" label="&tab_title_pref.label;"/>
+         <checkbox id="safe_browsing_check" preference="safe_browsing_pref" label="&safe_browsing_pref.label;"/>
+         <checkbox id="geo_locate_check" preference="geo_locate_pref" label="&geo_locate_pref.label;"/>
+         <checkbox id="dns_prefetch_check" preference="dns_prefetch_pref" label="&dns_prefetch_pref.label;"/>
+         <checkbox id="send_referer_check" preference="send_referer_pref" label="&send_referer_pref.label;"/>
+         <checkbox id="user_agent_check" preference="user_agent_pref" label="&user_agent_pref.label;"/>
+       </tabpanel>
+       <tabpanel id="annoyancestab" orient="vertical">
+         <checkbox id="anim_mode_check" preference="anim_mode_pref" label="&anim_mode_pref.label;"/>
+         <checkbox id="tool_tips_check" preference="tool_tips_pref" label="&tool_tips_pref.label;"/>
+         <checkbox id="spelling_check" preference="spelling_pref" label="&spelling_pref.label;"/>
+         <checkbox id="dns_cache_check" preference="dns_cache_pref" label="&dns_cache_pref.label;"/>
+       </tabpanel>
+       <tabpanel id="abouttab" orient="vertical">
+         <description>Calomel SSL Validation</description>
+         <spacer style="min-height: 1em;" />
+         <checkbox id="home_on_update_check" preference="home_on_update_pref" label="&home_on_update_pref.label;"/>
+         <spacer style="min-height: 1em;" />
+         <description>by Calomel @ https://calomel.org</description>
+       </tabpanel>
+     </tabpanels>
+    </tabbox>
+    <button id="apply_button" label="Apply Changes Now" onclick="calomelsslvalidation.startFirefox()" />
+
+  </prefpane>
+</prefwindow>

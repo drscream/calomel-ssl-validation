@@ -1,0 +1,72 @@
+#calomelsslvalidation-urlicon,
+toolbar[iconsize="small"] #calomelsslvalidation-urlicon,
+#calomelsslvalidation-urlicon > .toolbarbutton-menubutton-button {
+  padding: 0px !important;
+  list-style-image: url("chrome://calomelsslvalidation/skin/calomelsslvalidation_grey_button.png");
+  -moz-appearance: none !important;
+}
+
+#calomelsslvalidation-popup-container {
+  background-image: url("chrome://calomelsslvalidation/skin/calomelsslvalidation_popup_bg.png"); 
+  min-width: 450px;
+  border-color: #CCCCCC;
+  border-style: solid; 
+}
+
+#calomelsslvalidation-popup-icon {
+  height: 100px;
+  width: 101px;
+  background-image: url("chrome://calomelsslvalidation/skin/calomelsslvalidation_popup_icon.png");
+}
+
+#calomelsslvalidation-popup-content-box {
+  white-space: pre-wrap;
+}
+
+#calomelsslvalidation-popup-content-cert-type,
+#calomelsslvalidation-popup-content-issuer-location,
+#calomelsslvalidation-popup-content-organization-location,
+#calomelsslvalidation-popup-content-organization-cacert,
+#calomelsslvalidation-popup-content-organization-subcert,
+#calomelsslvalidation-popup-content-certificate,
+#calomelsslvalidation-popup-content-commonname,
+#calomelsslvalidation-popup-content-organization,
+#calomelsslvalidation-popup-content-issuer,
+#calomelsslvalidation-popup-content-before-date,
+#calomelsslvalidation-popup-content-after-date,
+#calomelsslvalidation-popup-content-pfs,
+#calomelsslvalidation-popup-content-ciphersuite,
+#calomelsslvalidation-popup-content-key_exchange,
+#calomelsslvalidation-popup-content-tls_version,
+#calomelsslvalidation-popup-content-signature,
+#calomelsslvalidation-popup-content-bulk_cipher,
+#calomelsslvalidation-popup-content-mac,
+#calomelsslvalidation-popup-content-secure,
+#calomelsslvalidation-popup-content-host {
+  color: #000000;
+  font-family:monospace;
+  max-width: 450px;
+}
+
+#calomelsslvalidation-calomel_ssl_validation_title {
+  color: #000000;
+  font-family:Verdana;
+  font-size:150%;
+  max-width: 450px;
+}
+
+#calomelsslvalidation-popup-content-current-date,
+#calomelsslvalidation-calomel_ssl_validation_homepage {
+  color: #000000;
+  font-family:Verdana;
+  font-size: 90%;
+  max-width: 450px;
+}
+
+#calomelsslvalidation-calomel_ssl_validation_homepage:hover {
+  color: #0000ff;
+  font-family:Verdana;
+  font-size: 90%;
+  max-width: 450px;
+  text-decoration: underline;
+}

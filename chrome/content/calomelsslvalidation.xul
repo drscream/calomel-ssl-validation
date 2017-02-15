@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="chrome://calomelsslvalidation/skin/overlay.css" type="text/css"?>
+<!DOCTYPE overlay SYSTEM "chrome://calomelsslvalidation/locale/overlay.dtd">
+<overlay id="calomelsslvalidation-overlay" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+  <script src="calomelsslvalidation.js"/>
+
+  <stringbundleset id="stringbundleset">
+    <stringbundle id="calomelsslvalidation-strings" src="chrome://calomelsslvalidation/locale/overlay.properties"/>
+  </stringbundleset>
+
+  <script type="application/x-javascript">
+    calomelsslvalidation.startFirefox();
+    window.addEventListener("load",   function() { calomelsslvalidation.onPageLoad(); },   false);
+  </script>
+
+ <menupopup id="menu_ToolsPopup"> 
+    <menuseparator/>
+    <menu id="edit-menu" label="Calomel SSL Validation" class="menu-iconic" image="chrome://calomelsslvalidation/skin/calomelsslvalidation_menu.png" validate="never"> 
+      <menupopup id="edit-popup">
+      <!--menuitem id="calomelsslvalidation-toggleCipherUser" label="toggle ciphers (temporary)" type="checkbox" oncommand="calomelsslvalidation.calomel_toggleCipherUser();"/-->
+      <!--menuitem id="calomelsslvalidation-toggleTabTitle" label="toggle tab titles (temporary)" type="checkbox" oncommand="calomelsslvalidation.calomel_toggleTabTitle();"/--> 
+    <!--menuseparator/-->
+        <menuitem id="calomelsslvalidation-memoryCacheUsage" label="memory cache usage" oncommand="calomelsslvalidation.calomel_memoryCacheUsage();" image="chrome://calomelsslvalidation/skin/calomelsslvalidation_memcache.png"/>
+        <menuitem id="calomelsslvalidation-diskCacheUsage" label="disk cache usage" oncommand="calomelsslvalidation.calomel_diskCacheUsage();" image="chrome://calomelsslvalidation/skin/calomelsslvalidation_diskcache.png"/>
+        <menuitem id="calomelsslvalidation-offlineCacheUsage" label="offline cache usage" oncommand="calomelsslvalidation.calomel_offlineCacheUsage();" image="chrome://calomelsslvalidation/skin/calomelsslvalidation_offlinecache.png"/>
+        <menuitem id="calomelsslvalidation-summaryCacheUsage" label="cache summary" oncommand="calomelsslvalidation.calomel_summaryCacheUsage();" image="chrome://calomelsslvalidation/skin/calomelsslvalidation_sumcache.png"/>
+    <menuseparator/>
+        <menuitem id="calomelsslvalidation-userPrefs" label="Preferences" oncommand="window.openDialog('chrome://calomelsslvalidation/content/options.xul');" image="chrome://calomelsslvalidation/skin/calomelsslvalidation_pref_gear.png"/>
+        <menuitem id="calomelsslvalidation-homePage" label="Help Page @ Calomel.org" oncommand="calomelsslvalidation.openHomePageLink();" image="chrome://calomelsslvalidation/skin/calomelsslvalidation_help_page.png"/>
+      </menupopup>
+    </menu>
+ </menupopup>
+
+<toolbarpalette id="BrowserToolbarPalette">
+  <toolbarbutton id="calomelsslvalidation-urlicon" class="toolbarbutton-1" label="Calomel SSL Validation" oncontextmenu="event.preventDefault()" onclick="calomelsslvalidation.calomelButtonEvent(event);" />
+</toolbarpalette>
+
+  <popupset label="calomelsslvalidation-details" type="panel">
+    <panel id="calomelsslvalidation-popup">
+      <hbox id="calomelsslvalidation-popup-container" align="top">
+        <image id="calomelsslvalidation-popup-icon" validate="never"/>
+        <vbox id="calomelsslvalidation-popup-content-box">
+          <label id="calomelsslvalidation-calomel_ssl_validation_title" value="&calomelsslvalidation.calomel_ssl_validation_title;" />
+          <separator/>
+   	  <description id="calomelsslvalidation-popup-content-secure"/>
+   	  <description id="calomelsslvalidation-popup-content-certificate"/>
+   	  <description id="calomelsslvalidation-popup-content-cert-type"/>
+   	  <description id="calomelsslvalidation-popup-content-host"/>
+   	  <description id="calomelsslvalidation-popup-content-commonname"/>
+      <description id="calomelsslvalidation-popup-content-pfs"/>
+      <description id="calomelsslvalidation-popup-content-ciphersuite"/>
+      <description id="calomelsslvalidation-popup-content-tls_version"/>
+      <description id="calomelsslvalidation-popup-content-key_exchange"/>
+      <description id="calomelsslvalidation-popup-content-signature"/>
+      <description id="calomelsslvalidation-popup-content-bulk_cipher"/>
+      <description id="calomelsslvalidation-popup-content-mac"/>
+   	  <description id="calomelsslvalidation-popup-content-organization"/>
+   	  <description id="calomelsslvalidation-popup-content-organization-location"/>
+   	  <description id="calomelsslvalidation-popup-content-organization-subcert"/>
+   	  <description id="calomelsslvalidation-popup-content-issuer"/>
+   	  <description id="calomelsslvalidation-popup-content-issuer-location"/>
+   	  <description id="calomelsslvalidation-popup-content-organization-cacert"/>
+   	  <description id="calomelsslvalidation-popup-content-before-date"/>
+   	  <description id="calomelsslvalidation-popup-content-after-date"/>
+   	  <description id="calomelsslvalidation-popup-content-current-date"/>
+          <menuitem id="calomelsslvalidation-calomel_ssl_validation_homepage" oncommand="calomelsslvalidation.openHomePageLink(event)" onclick="checkForMiddleClick(this, event)" label="by Calomel @ https://calomel.org"/>
+        </vbox>
+      </hbox>
+    </panel>
+  </popupset>
+
+</overlay>
